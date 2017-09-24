@@ -6,7 +6,7 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./input.component.css']
 })
 export class InputComponent implements OnInit {
-  private title: string = '';
+  title: string = '';
   @Output() submit: EventEmitter<string> = new EventEmitter();
 
   constructor() {

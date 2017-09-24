@@ -8,7 +8,7 @@ import { TodoListService } from '../todo-list.service';
 })
 export class ListManagerComponent implements OnInit {
   title = 'todo';
-  private todoList;
+  todoList;
 
   constructor(private todoListService: TodoListService) { }
 
