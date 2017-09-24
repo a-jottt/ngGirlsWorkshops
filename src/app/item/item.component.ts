@@ -9,6 +9,7 @@ import { TodoListStorageService } from '../todo-list-storage.service';
 export class ItemComponent implements OnInit {
   @Input() todoItem: any;
   @Output() remove: EventEmitter<any> = new EventEmitter();
+  @Output() done: EventEmitter<any> = new EventEmitter();
   private todoList;
 
   constructor(private todoListStorageService: TodoListStorageService) { }
@@ -19,5 +20,9 @@ export class ItemComponent implements OnInit {
 
   removeItem() {
     this.remove.emit(this.todoItem);
+  }
+
+  setDone() {
+    this.done.emit(this.todoItem);
   }
 }

@@ -17,11 +17,15 @@ export class ListManagerComponent implements OnInit {
   }
 
   addItem(title: string) {
-    this.todoList = this.todoListService.addItem({ title });
+    this.todoList = this.todoListService.addItem({ title, done: false });
   }
 
   removeItem(item) {
     this.todoList = this.todoListService.removeItem(item);
+  }
+
+  setAsDone(item) {
+    this.todoList = this.todoListService.setDone(item, !item.done);
   }
 
 }
