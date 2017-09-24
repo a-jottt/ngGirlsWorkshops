@@ -28,6 +28,6 @@ export class TodoListService {
   }
 
   setDone(item, done) {
-    return this.storage.put(item, {done: done});
+    return this.storage.put(item, {done});
   }
 }
