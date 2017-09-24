@@ -3,6 +3,6 @@
   (keyup.enter)="changeTitle(inputElement)"
   #inputElement>
 
-  <button (click)="changeTitle(inputElement)"> Save </button>
+  <button (click)="changeTitle(inputElement.value)"> Save </button>
 </p>
 <p>The title is: {{ title }}</p>
