@@ -1,6 +1,8 @@
 <p>
   <input [value]="title"
-  (keyup.enter)="changeTitle($event.target.value)">
-  <button (click)="changeTitle('Button Clicked!')"> Save </button>
+  (keyup.enter)="changeTitle(inputElement)"
+  #inputElement>
+
+  <button (click)="changeTitle(inputElement)"> Save </button>
 </p>
 <p>The title is: {{ title }}</p>

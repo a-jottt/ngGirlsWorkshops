@@ -14,8 +14,9 @@ export class InputComponent implements OnInit {
   ngOnInit() {
   }
 
-  changeTitle(newTitle): void {
-    this.title = newTitle;
+  changeTitle(inputElementReference): void {
+    console.log(inputElementReference);
+    this.title = inputElementReference.value;
   }
 
 }
