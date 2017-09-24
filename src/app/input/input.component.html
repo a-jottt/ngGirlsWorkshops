@@ -1,8 +1,6 @@
-<p>
-  <input [value]="title"
-  (keyup.enter)="changeTitle(inputElement)"
-  #inputElement>
+<input class="todo-input" [value]="title"
+(keyup.enter)="changeTitle(inputElement)"
+#inputElement>
 
-  <button (click)="changeTitle(inputElement.value)"> Save </button>
-</p>
-<p>The title is: {{ title }}</p>
+<button (click)="changeTitle(inputElement.value)"> Save </button>
+
