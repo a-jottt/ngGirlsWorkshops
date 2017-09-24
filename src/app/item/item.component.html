@@ -1,4 +1,5 @@
 <p class="todo-item">
-  {{ todoItem.title }}
+    <input class="todo-checkbox" #todoItemCheckbox [(ngModel)]="todoItem.done" type="checkbox" data-toggle="toggle"/>
+  <span [class.done]=todoItem.done class=todo-item-span> {{ todoItem.title }} </span>
   <button class="btn btn-red" (click)="removeItem()">Remove item</button>
 </p>

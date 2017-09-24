@@ -1,6 +1,6 @@
 <todo-input class="todo-add" (submit)="addItem($event)"></todo-input>
 <ul>
   <li *ngFor="let item of todoList">
-      <todo-item [todoItem]="item"></todo-item>
+      <todo-item [todoItem]="item" (remove)="removeItem($event)"></todo-item>
   </li>
 </ul>
